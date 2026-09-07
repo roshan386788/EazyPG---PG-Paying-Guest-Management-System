@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: sf-auth
+  devtools:
+    restart:
+      enabled: false
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://eureka-server:8761/eureka
+
+server:
+  port: 9091
+
+jwt:
+  keystore:
+    location: classpath:jwt-keystore.jks
+    password: password
+    alias: jwt-key
+
+logging:
+  level:
+    root: INFO
+    com.eazypg.Auth_Service: DEBUG

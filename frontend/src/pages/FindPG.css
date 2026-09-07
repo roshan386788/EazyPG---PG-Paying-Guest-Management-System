@@ -1,0 +1,228 @@
+.eazy-page {
+  min-height: 100vh;
+  background: var(--eazy-cream);
+  font-family: var(--font-body);
+}
+
+/* ---------- HERO ---------- */
+.eazy-hero {
+  background: linear-gradient(135deg, var(--eazy-navy) 0%, var(--eazy-blue) 100%);
+  padding: 56px 24px 90px;
+  text-align: center;
+  position: relative;
+}
+
+.eazy-hero-inner {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.eazy-hero-title {
+  color: var(--eazy-white);
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.eazy-hero-subtitle {
+  color: #DCE7F5;
+  font-size: 16px;
+  margin: 0;
+}
+
+/* Floating search card, overlapping the hero bottom edge */
+.eazy-search-card {
+  background: var(--eazy-white);
+  max-width: 720px;
+  margin: 32px auto -46px;
+  border-radius: var(--eazy-radius-lg);
+  box-shadow: var(--eazy-shadow-lg);
+  padding: 12px;
+  display: flex;
+  gap: 10px;
+  position: relative;
+  z-index: 5;
+}
+
+.eazy-search-field {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px;
+  background: var(--eazy-cream);
+  border-radius: var(--eazy-radius-md);
+}
+
+.eazy-search-icon {
+  color: var(--eazy-blue);
+  flex-shrink: 0;
+}
+
+.eazy-search-field input {
+  border: none;
+  background: transparent;
+  outline: none;
+  width: 100%;
+  font-size: 15px;
+  color: var(--eazy-text);
+  font-family: var(--font-body);
+}
+
+.eazy-search-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--eazy-blue);
+  color: var(--eazy-white);
+  border: none;
+  padding: 0 26px;
+  border-radius: var(--eazy-radius-md);
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background 0.15s ease;
+  white-space: nowrap;
+}
+
+.eazy-search-btn:hover {
+  background: var(--eazy-blue-dark);
+}
+
+/* ---------- CITY CHIPS ---------- */
+.eazy-chip-row {
+  max-width: 900px;
+  margin: 64px auto 0;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.eazy-chip-label {
+  color: var(--eazy-text-muted);
+  font-size: 14px;
+  margin-right: 4px;
+}
+
+.eazy-chip {
+  border: 1px solid var(--eazy-mist);
+  background: var(--eazy-white);
+  color: var(--eazy-navy);
+  padding: 6px 16px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.eazy-chip:hover {
+  background: var(--eazy-blue);
+  border-color: var(--eazy-blue);
+  color: var(--eazy-white);
+}
+
+/* ---------- BODY LAYOUT ---------- */
+.eazy-body {
+  display: flex;
+  gap: 24px;
+  max-width: 1200px;
+  margin: 24px auto 60px;
+  padding: 0 24px;
+  align-items: flex-start;
+}
+
+.eazy-filter-panel {
+  width: 280px;
+  flex-shrink: 0;
+  background: var(--eazy-white);
+  border: 1px solid var(--eazy-mist);
+  border-radius: var(--eazy-radius-md);
+  padding: 20px;
+  position: sticky;
+  top: 90px;
+}
+
+.eazy-filter-heading {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 17px;
+  margin-bottom: 16px;
+  color: var(--eazy-navy);
+}
+
+.eazy-filter-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--eazy-text-muted);
+  margin-bottom: 4px;
+  display: block;
+}
+
+.eazy-filter-panel .form-control {
+  border-color: var(--eazy-mist);
+  border-radius: 8px;
+}
+.eazy-filter-panel .form-control:focus {
+  border-color: var(--eazy-blue);
+  box-shadow: 0 0 0 3px rgba(63, 114, 175, 0.15);
+}
+
+.eazy-clear-btn {
+  width: 100%;
+  margin-top: 8px;
+  background: var(--eazy-cream);
+  border: 1px solid var(--eazy-mist);
+  color: var(--eazy-navy);
+  padding: 10px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.eazy-clear-btn:hover {
+  background: var(--eazy-mist);
+}
+
+.eazy-results-panel {
+  flex: 1;
+  min-width: 0;
+}
+
+.eazy-results-heading {
+  font-family: var(--font-display);
+  font-weight: 600;
+  color: var(--eazy-navy);
+  font-size: 18px;
+  margin-bottom: 16px;
+}
+
+.eazy-empty-msg {
+  color: var(--eazy-text-muted);
+  padding: 40px 0;
+  text-align: center;
+}
+
+.pg-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 22px;
+}
+
+@media (max-width: 900px) {
+  .eazy-body {
+    flex-direction: column;
+  }
+  .eazy-filter-panel {
+    width: 100%;
+    position: static;
+  }
+  .eazy-hero-title {
+    font-size: 30px;
+  }
+  .eazy-search-card {
+    flex-direction: column;
+  }
+}

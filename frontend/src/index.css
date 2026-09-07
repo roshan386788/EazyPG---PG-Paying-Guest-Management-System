@@ -1,0 +1,66 @@
+:root {
+  /* ---- EazyPG design tokens ---- */
+  --eazy-cream: #F9F7F7;   /* page background */
+  --eazy-mist: #DBE2EF;    /* soft surfaces / chips / borders */
+  --eazy-blue: #3F72AF;    /* primary action color */
+  --eazy-blue-dark: #335f92;
+  --eazy-navy: #112D4E;    /* headings / header / footer */
+  --eazy-white: #FFFFFF;
+
+  --eazy-text: #16263A;
+  --eazy-text-muted: #5B6B7F;
+
+  --eazy-radius-sm: 10px;
+  --eazy-radius-md: 16px;
+  --eazy-radius-lg: 24px;
+
+  --eazy-shadow-sm: 0 2px 8px rgba(17, 45, 78, 0.08);
+  --eazy-shadow-md: 0 10px 30px rgba(17, 45, 78, 0.12);
+  --eazy-shadow-lg: 0 20px 45px rgba(17, 45, 78, 0.18);
+
+  --font-display: "Poppins", "Segoe UI", sans-serif;
+  --font-body: "Inter", "Segoe UI", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--eazy-cream);
+  color: var(--eazy-text);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  color: var(--eazy-navy);
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Reusable primary button, used to override Bootstrap's btn-primary look */
+.btn-primary {
+  background-color: var(--eazy-blue) !important;
+  border-color: var(--eazy-blue) !important;
+}
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: var(--eazy-blue-dark) !important;
+  border-color: var(--eazy-blue-dark) !important;
+}
+.btn-outline-danger {
+  --bs-btn-color: var(--eazy-navy);
+  --bs-btn-border-color: var(--eazy-mist);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}

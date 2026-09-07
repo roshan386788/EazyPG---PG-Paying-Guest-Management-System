@@ -1,0 +1,108 @@
+.eazy-auth-page {
+  min-height: 100vh;
+  background: var(--eazy-cream);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  font-family: var(--font-body);
+}
+
+.eazy-auth-row {
+  width: 100%;
+  max-width: 1000px;
+  display: flex;
+  border-radius: var(--eazy-radius-lg);
+  overflow: hidden;
+  box-shadow: var(--eazy-shadow-lg);
+  background: var(--eazy-white);
+}
+
+.eazy-auth-form-col {
+  flex: 1;
+  padding: 48px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.eazy-auth-form-inner {
+  width: 100%;
+  max-width: 360px;
+}
+
+.eazy-auth-brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 22px;
+  color: var(--eazy-navy);
+  margin-bottom: 28px;
+}
+
+.eazy-auth-brand .brand-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 9px;
+  background: var(--eazy-blue);
+  color: var(--eazy-white);
+}
+
+.eazy-auth-brand .brand-accent {
+  color: var(--eazy-blue);
+}
+
+.eazy-auth-heading {
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--eazy-navy);
+  margin-bottom: 4px;
+}
+
+.eazy-auth-subheading {
+  color: var(--eazy-text-muted);
+  font-size: 14px;
+  margin-bottom: 24px;
+}
+
+.eazy-auth-form-inner .form-control {
+  border-color: var(--eazy-mist);
+  border-radius: 10px;
+  padding: 11px 14px;
+}
+.eazy-auth-form-inner .form-control:focus {
+  border-color: var(--eazy-blue);
+  box-shadow: 0 0 0 3px rgba(63, 114, 175, 0.15);
+}
+
+.eazy-auth-form-inner .btn-primary {
+  border-radius: 10px;
+  padding: 11px 0;
+  font-weight: 600;
+}
+
+.eazy-auth-side-col {
+  flex: 1;
+  background: linear-gradient(160deg, var(--eazy-navy) 0%, var(--eazy-blue) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 32px;
+}
+
+.eazy-auth-side-col img {
+  border-radius: var(--eazy-radius-md);
+}
+
+@media (max-width: 900px) {
+  .eazy-auth-side-col {
+    display: none;
+  }
+}

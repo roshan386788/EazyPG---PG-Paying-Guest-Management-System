@@ -1,0 +1,69 @@
+version: "3.8"
+
+name: eazypg
+
+services:
+  eureka-server:
+    build: ./backend/eureka-server
+    ports:
+      - "8761:8761"
+
+  sf-auth:
+    build: ./backend/sf-auth
+    ports:
+      - "9091:9091"
+    depends_on:
+      - eureka-server
+    restart: on-failure
+
+  sf-usermanagement:
+    build: ./backend/sf-usermanagement
+    ports:
+      - "8081:8081"
+    depends_on:
+      - eureka-server
+    restart: on-failure
+
+  sf-propertymanagement:
+    build: ./backend/sf-propertymanagement
+    ports:
+      - "8085:8085"
+    depends_on:
+      - eureka-server
+    restart: on-failure
+
+  sf-bookingmanagement:
+    build: ./backend/sf-bookingmanagement
+    ports:
+      - "8083:8083"
+    depends_on:
+      - eureka-server
+    restart: on-failure
+
+  sf-paymentmanagement:
+    build: ./backend/sf-paymentmanagement
+    ports:
+      - "8095:8095"
+    depends_on:
+      - eureka-server
+    restart: on-failure
+
+  api-gateway:
+    build: ./backend/api-gateway
+    ports:
+      - "8000:8000"
+    depends_on:
+      - eureka-server
+      - sf-auth
+      - sf-usermanagement
+      - sf-propertymanagement
+      - sf-bookingmanagement
+      - sf-paymentmanagement
+    restart: on-failure
+
+  frontend:
+    build: ./frontend
+    ports:
+      - "3000:3000"
+    depends_on:
+      - api-gateway

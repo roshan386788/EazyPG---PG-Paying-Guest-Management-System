@@ -1,0 +1,16 @@
+.pg-card {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 280px;
+  font-family: "Segoe UI", sans-serif;
+  position: relative;
+}
+.pg-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* ⬅️ Forces 3 columns */
+  gap: 0px;
+  padding: 0 15px;
+  width: 100;
+}
